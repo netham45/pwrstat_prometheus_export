@@ -48,9 +48,7 @@ def get_data():
     if "Last_Power_Event" in result: iLast_Power_Event.info({'last_power_event': result['Last_Power_Event']})
     
 if __name__ == '__main__':
-    # Start up the server to expose the metrics.
     start_http_server(8777)
-    # Generate some requests.
     while True:
         time.sleep(1)
         get_data()
